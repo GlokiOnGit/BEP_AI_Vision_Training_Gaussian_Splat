@@ -11,14 +11,14 @@ def draw_bounding_boxes(image_folder, label_folder, output_folder):
 
     # Loop through all images in the folder
     for img_file in os.listdir(image_folder):
-        if img_file.endswith('.jpeg'):
+        if img_file.endswith('.png'):
             # Load the image
             img_path = os.path.join(image_folder, img_file)
             img = cv2.imread(img_path)
             img_height, img_width, _ = img.shape
 
             # Corresponding label file
-            label_file = img_file.replace('.jpeg', '.txt')
+            label_file = img_file.replace('.png', '.txt')
             label_path = os.path.join(label_folder, label_file)
 
             # Check if the label file exists
@@ -70,9 +70,9 @@ def show_image_with_boxes(image_path):
 
 if __name__ == "__main__":
     # Paths to your folders
-    image_folder = r'C:\Users\20212127\Documents\Y4\BEP\yolov8_training\dataset\detect_images_final_pink'  # Folder containing the images
-    label_folder = r'C:\Users\20212127\Documents\Y4\BEP\yolov8_training\dataset\detect_labels_final_pink'  # Folder containing the labels
-    output_folder = r'C:\\Users\\20212127\\Documents\\Y4\\BEP\\yolov8_training\\dataset\\output_box'  # Folder to save the images with drawn bounding boxes
+    image_folder = r'C:\Users\20212127\Documents\Y4\synthetic_dataset_ARBB\images'  # Folder containing the images
+    label_folder = r'C:\Users\20212127\Documents\Y4\synthetic_dataset_ARBB\labels'  # Folder containing the labels
+    output_folder = r'C:\Users\20212127\Documents\Y4\synthetic_dataset_ARBB\output'  # Folder to save the images with drawn bounding boxes
 
     # Step 1: Draw bounding boxes and save the images
     draw_bounding_boxes(image_folder, label_folder, output_folder)

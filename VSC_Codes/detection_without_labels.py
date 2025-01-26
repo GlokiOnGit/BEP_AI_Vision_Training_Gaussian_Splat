@@ -4,16 +4,16 @@ from ultralytics import YOLO
 
 def main():
     # Load the trained YOLO model
-    model = YOLO(r'C:\Users\20212127\Documents\Y4\BEP\Training\trainings\GSR.pt')
+    model = YOLO(r'C:\Users\20212127\Documents\Y4\BEP_AI_Vision_Training_Gaussian_Splat\AI_Vision_Trainings\GSB.pt')
 
     # Define paths for test images and output
-    source_directory = r'C:\Users\20212127\Documents\Y4\BEP\yolov8_training\dataset\robot'
-    output_directory = r'C:\Users\20212127\Documents\Y4\BEP\yolov8_training\dataset\output'
+    source_directory = r'C:\Users\20212127\Documents\Y4\test\image'
+    output_directory = r'C:\Users\20212127\Documents\Y4\test\output'
     os.makedirs(output_directory, exist_ok=True)
 
     # Process each image
     for filename in os.listdir(source_directory):
-        if filename.endswith('.jpg'):
+        if filename.endswith('.png'):
             image_path = os.path.join(source_directory, filename)
             print(f"Processing {image_path}...")
 
@@ -24,7 +24,7 @@ def main():
                 continue
 
             # Perform detection
-            results = model(image, conf=0.8)
+            results = model(image, conf=0.5)
             
             # Check if detections were made
             if len(results[0].boxes) == 0:

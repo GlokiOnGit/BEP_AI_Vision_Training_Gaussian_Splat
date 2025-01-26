@@ -1,4 +1,0 @@
-0	ball
-1	orange robot TechUnited
-2	first generation pink robot Falcons
-3	second generation pink robot Falcons

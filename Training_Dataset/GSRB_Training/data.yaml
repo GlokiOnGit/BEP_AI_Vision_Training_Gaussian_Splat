@@ -1,0 +1,6 @@
+# new_test_data.yaml
+train: C:\Users\20212127\Documents\Y4\BEP\yolov8_training\dataset\images\train
+val: C:\Users\20212127\Documents\Y4\BEP\yolov8_training\dataset\images\test
+
+nc: 1                # Number of classes
+names: ['o']         # List of class names

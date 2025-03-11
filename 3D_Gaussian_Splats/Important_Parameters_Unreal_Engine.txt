@@ -1,6 +1,6 @@
 Scaling, translation, and rotations for the different 3D Gaussian splats in Unreal Engine
 
-Object				Scale	Z-translation	X-rotation	Y-rotation	Z-Rotatoin
+Object				Scale	Z-translation	X-rotation	Y-rotation	Z-rotation
 Ball				0.8	39		0		0		0
 TechUnited Robot		0.5	41		3		-2		0
 Falcons Robot First Generation	0.5	36		-1		-5		0

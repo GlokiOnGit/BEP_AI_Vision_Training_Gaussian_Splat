@@ -1,5 +1,0 @@
-path: C:\Users\20212127\Documents\Y4\BEP\yolov8_training\dataset  # Root directory for dataset
-train: images/train  # Training dataset directory
-val: images/val      # Validation dataset directory
-nc: 4                # Number of classes
-names: ['o', 'p1', 'p2', 'b']  # List of class names
